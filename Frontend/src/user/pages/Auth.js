@@ -99,7 +99,7 @@ const Auth = () => {
           }
         );
 
-        auth.login();
+        login();
       } catch (err) {
         console.log(err);
       }

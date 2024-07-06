@@ -3,7 +3,7 @@ const bodyParser = require("body-parser");
 
 //STEP 1 import Mongoose
 const Mongoose = require("mongoose");
-
+const cors = require("cors");
 const placesRoutes = require("./routes/places-routes");
 const usersRoutes = require("./routes/users-routes");
 const { default: mongoose } = require("mongoose");
@@ -12,6 +12,13 @@ const { default: mongoose } = require("mongoose");
 const path = require("path");
 
 const app = express();
+app.use(cors());
+
+app.use(
+  cors({
+    origin: "http://localhost:3000",
+  })
+);
 
 //STEP 1 add a new MiddleWare that parses the data
 //routes are read top to bottom

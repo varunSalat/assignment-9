@@ -31,7 +31,7 @@ const UserPlaces = () => {
     [sendRequest] //specific sendrequest as a depedency, this is a depedent of useEffect
   );
 
-  return <PlaceLst items={userPlaces} />;
+  return <PlaceList items={userPlaces} />;
 };
 
 export default UserPlaces;
